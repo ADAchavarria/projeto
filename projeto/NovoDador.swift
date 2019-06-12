@@ -9,10 +9,10 @@
 import UIKit
 
 class NovoDador: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -59,71 +59,71 @@ class NovoDador: UIViewController {
         if (username.text!.isEmpty || password.text!.isEmpty || nome.text!.isEmpty || morada.text!.isEmpty || nascimento.text!.isEmpty || nmrsaude.text!.isEmpty || tiposangue.text!.isEmpty || hospital.text!.isEmpty
             ){
             self.createAlert(title: "Registo inválido", message: "Por favor preencha todos os campos.")
-
+            
         } else {
             
-        
-        
-        
-        do{
-
-            let dados = EntityInputNovo(username: username.text!, password: password.text!, nome: nome.text!, morada: morada.text!, nascimento: nascimento.text!, nmrsaude: nmrsaude.text!, tiposangue: tiposangue.text!, hospital: hospital.text!)
-            let jsonBody = try JSONEncoder().encode(dados)
-            request.httpBody = jsonBody
-            
-            print("jsonBody:", jsonBody)
-            
-            let jsonBodyString = String(data: jsonBody, encoding: .utf8)
-            
-            print("JSON String : ", jsonBodyString!)
-
             
             
-        } catch {
-            print("Erro")
-            return
-        }
-        
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
-            guard error == nil else {
-                print("AAAAAAAAAAAAA")
-                print(error!)
-                return
-            }
-            
-            guard let data = data else {
-                print("Data is empty")
-                return
-            }
-            
-            do {
+            do{
                 
-                print(data)
-                let decoder = JSONDecoder()
-                let response = try decoder.decode(EntityReturnNovo.self, from: data)
+                let dados = EntityInputNovo(username: username.text!, password: password.text!, nome: nome.text!, morada: morada.text!, nascimento: nascimento.text!, nmrsaude: nmrsaude.text!, tiposangue: tiposangue.text!, hospital: hospital.text!)
+                let jsonBody = try JSONEncoder().encode(dados)
+                request.httpBody = jsonBody
                 
-                print("DATA:\(data)")
-                let jsonBodyString = String(data: data, encoding: .utf8)
+                print("jsonBody:", jsonBody)
+                
+                let jsonBodyString = String(data: jsonBody, encoding: .utf8)
+                
                 print("JSON String : ", jsonBodyString!)
                 
-                print("RESPONSE MSG:\(response.status)")
                 
                 
-                
-            } catch let jsonError {
-                print(jsonError)
-                self.createAlert(title: "Erro!", message: "Preencha todos os campos.")
+            } catch {
+                print("Erro")
+                return
             }
+            
+            
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                
+                guard error == nil else {
+                    print("AAAAAAAAAAAAA")
+                    print(error!)
+                    return
+                }
+                
+                guard let data = data else {
+                    print("Data is empty")
+                    return
+                }
+                
+                do {
+                    
+                    print(data)
+                    let decoder = JSONDecoder()
+                    let response = try decoder.decode(EntityReturnNovo.self, from: data)
+                    
+                    print("DATA:\(data)")
+                    let jsonBodyString = String(data: data, encoding: .utf8)
+                    print("JSON String : ", jsonBodyString!)
+                    
+                    print("RESPONSE MSG:\(response.status)")
+                    
+                    
+                    
+                } catch let jsonError {
+                    print(jsonError)
+                    self.createAlert(title: "Erro!", message: "Preencha todos os campos.")
+                }
             }
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "menu") as! Menu
             self.present(vc, animated: true, completion: nil)
-        task.resume()
-       
+            task.resume()
+            
+            
+            
+        }
         
-        
-    }
-    
     }
 }
