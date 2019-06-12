@@ -52,7 +52,7 @@ class NovoDador: UIViewController {
     
     
     @IBAction func novo(_ sender: Any) {
-        var request = URLRequest(url: URL(string: "http://192.168.1.168/trab/api/teste")!)
+        var request = URLRequest(url: URL(string: "http://172.16.182.63/trab/api/teste")!)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         

@@ -10,7 +10,7 @@ import UIKit
 
 class ListarDadores: UIViewController, UITableViewDataSource {
    
-    final let url = URL(string: "http://192.168.1.3/trab/api/logins/")
+    final let url = URL(string: "http://172.16.182.63/trab/api/logins")
     private var listas = [Lista]()
     
     

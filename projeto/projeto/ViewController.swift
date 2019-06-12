@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func login(_ sender: Any) {
-        let urlString = "http://192.168.1.3/trab/api/id/" + user.text!
+        let urlString = "http://172.16.182.63/trab/api/id/" + user.text!
        
         
         print("DATA:\(urlString)")
