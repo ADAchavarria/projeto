@@ -9,23 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        loginButton.layer.cornerRadius = 7
+        
     }
-
+    
     
     
     
     @IBOutlet weak var user: UITextField!
     @IBOutlet weak var pass: UITextField!
-    @IBOutlet weak var lbl: UILabel!
+    
+    @IBOutlet weak var loginButton: UIButton!
     
     
     @IBAction func login(_ sender: Any) {
         let urlString = "http://192.168.1.168/trab/api/id/" + user.text!
-       
+        
         
         print("DATA:\(urlString)")
         
@@ -48,14 +50,12 @@ class ViewController: UIViewController {
                         print("WS: \(response.username)")
                         let vc = self.storyboard?.instantiateViewController(withIdentifier: "menu") as! Menu
                         self.present(vc, animated: true, completion: nil)
-
+                        
                         //self.present(vc, animated: true, completion: nil)
                     } else {
-                        self.lbl.text = "Erro"
                     }
                 }
             } catch {
-                self.lbl.text = "Erro"
                 print("Error")
             }
             }.resume()
