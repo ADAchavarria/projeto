@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D105825F22AEF4F8004CE298 /* ListaDadoresCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D105825E22AEF4F8004CE298 /* ListaDadoresCell.swift */; };
+		D1071F2D22B10774005F7518 /* Lista.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1071F2C22B10774005F7518 /* Lista.swift */; };
 		D140FB7522A8406000895A8F /* EntityReturnNovo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D140FB7422A8406000895A8F /* EntityReturnNovo.swift */; };
 		D140FB7722A8412A00895A8F /* EntityInputNovo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D140FB7622A8412A00895A8F /* EntityInputNovo.swift */; };
 		D174E02F22A736FB003E102E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174E02E22A736FB003E102E /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		D105825E22AEF4F8004CE298 /* ListaDadoresCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDadoresCell.swift; sourceTree = "<group>"; };
+		D1071F2C22B10774005F7518 /* Lista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Lista.swift; path = ../../Lista.swift; sourceTree = "<group>"; };
 		D140FB7422A8406000895A8F /* EntityReturnNovo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityReturnNovo.swift; sourceTree = "<group>"; };
 		D140FB7622A8412A00895A8F /* EntityInputNovo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityInputNovo.swift; sourceTree = "<group>"; };
 		D174E02B22A736FB003E102E /* projeto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projeto.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +89,7 @@
 				D140FB7422A8406000895A8F /* EntityReturnNovo.swift */,
 				D140FB7622A8412A00895A8F /* EntityInputNovo.swift */,
 				D105825E22AEF4F8004CE298 /* ListaDadoresCell.swift */,
+				D1071F2C22B10774005F7518 /* Lista.swift */,
 			);
 			path = projeto;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				D174E04922A74CA3003E102E /* ListarDadores.swift in Sources */,
 				D140FB7722A8412A00895A8F /* EntityInputNovo.swift in Sources */,
 				D105825F22AEF4F8004CE298 /* ListaDadoresCell.swift in Sources */,
+				D1071F2D22B10774005F7518 /* Lista.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
