@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82.5" y="28.52112676056338"/>
+            <point key="canvasLocation" x="219" y="20"/>
         </scene>
         <!--Listar Dadores-->
         <scene sceneID="AY3-F2-fPh">
@@ -162,6 +162,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1Xi-zH-RPg"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="BeX-Lz-vMi" id="GuA-xO-S2a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ESb-ae-VXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -234,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lls-dw-V1l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="876" y="29"/>
+            <point key="canvasLocation" x="844" y="19"/>
         </scene>
         <!--Novo Dador-->
         <scene sceneID="Pv3-jA-Efb">

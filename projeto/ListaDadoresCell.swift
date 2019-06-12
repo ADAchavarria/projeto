@@ -2,7 +2,7 @@
 //  ListaDadoresCell.swift
 //  projeto
 //
-//  Created by Bernardo on 10/06/2019.
+//  Created by Ricardo on 10/06/2019.
 //  Copyright © 2019 ipvc.estg. All rights reserved.
 //
 
@@ -17,15 +17,17 @@ class ListaDadoresCell: UITableViewCell {
     
     @IBOutlet weak var lblHospital: UILabel!
     
+    @IBOutlet weak var lblNmrSaude: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }
