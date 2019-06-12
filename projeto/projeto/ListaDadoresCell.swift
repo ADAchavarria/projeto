@@ -17,6 +17,8 @@ class ListaDadoresCell: UITableViewCell {
     
     @IBOutlet weak var lblHospital: UILabel!
     
+    @IBOutlet weak var lblNmrSaude: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

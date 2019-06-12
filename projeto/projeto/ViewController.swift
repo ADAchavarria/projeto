@@ -12,7 +12,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        loginButton.layer.cornerRadius = 7
+        
     }
 
     
@@ -20,11 +21,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var user: UITextField!
     @IBOutlet weak var pass: UITextField!
-    @IBOutlet weak var lbl: UILabel!
+
+    @IBOutlet weak var loginButton: UIButton!
     
     
     @IBAction func login(_ sender: Any) {
-        let urlString = "http://192.168.1.168/trab/api/id/" + user.text!
+        let urlString = "http://192.168.1.3/trab/api/id/" + user.text!
        
         
         print("DATA:\(urlString)")
@@ -51,11 +53,9 @@ class ViewController: UIViewController {
 
                         //self.present(vc, animated: true, completion: nil)
                     } else {
-                        self.lbl.text = "Erro"
                     }
                 }
             } catch {
-                self.lbl.text = "Erro"
                 print("Error")
             }
             }.resume()

@@ -13,9 +13,19 @@ class Menu: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        novoButton.layer.cornerRadius = 15
+        listaButton.layer.cornerRadius = 15
+        qrButton.layer.cornerRadius = 15
+
         // Do any additional setup after loading the view.
     }
     
+  
+    @IBOutlet weak var novoButton: UIButton!
+    
+    @IBOutlet weak var listaButton: UIButton!
+
+    @IBOutlet weak var qrButton: UIButton!
     
     @IBAction func novoDador(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "novodador") as! NovoDador
